@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iridaWorkflow>
+  <id>b78c8d73-6e8c-419c-b959-d19df935501b</id>
+  <name>tetyper</name>
+  <version>0.1.0</version>
+  <analysisType>TETYPER</analysisType>
+  <inputs>
+    <sequenceReadsPaired/>
+    <reference>reference</reference>
+    <requiresSingleSample>true</requiresSingleSample>
+  </inputs>
+  <parameters>
+    <parameter name="tetyper-2-min_each_strand" defaultValue="1">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/tetyper/tetyper/1.1+galaxy0" parameterName="min_each_strand" label="Minimum Reads (each strand)" type="integer"/>
+    </parameter>
+    <parameter name="tetyper-2-min_qual" defaultValue="10">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/tetyper/tetyper/1.1+galaxy0" parameterName="min_qual" label="Minimum quality" type="integer"/>
+    </parameter>
+    <parameter name="tetyper-2-min_reads" defaultValue="10">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/tetyper/tetyper/1.1+galaxy0" parameterName="min_reads" label="Minimum Reads" type="integer"/>
+    </parameter>
+    <parameter name="tetyper-2-flank_length" defaultValue="5">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/tetyper/tetyper/1.1+galaxy0" parameterName="flank_length" label="Flank Length" type="integer"/>
+    </parameter>
+    <parameter name="tetyper-2-min_mapped_len" defaultValue="30">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/tetyper/tetyper/1.1+galaxy0" parameterName="min_mapped_len" label="Minimum Mapped Length" type="integer"/>
+    </parameter>
+  </parameters>
+  <outputs>
+    <output name="tetyper_snps.vcf" fileName="tetyper_snps.vcf"/>
+    <output name="tetyper_log.txt" fileName="tetyper_log.txt"/>
+    <output name="tetyper_summary.tsv" fileName="tetyper_summary.tsv"/>
+    <output name="tetyper_alignment.bam" fileName="tetyper_alignment.bam"/>
+    <output name="tetyper_blast.tsv" fileName="tetyper_blast.tsv"/>
+  </outputs>
+  <toolRepositories>
+    <repository>
+      <name>tetyper</name>
+      <owner>iuc</owner>
+      <url>https://toolshed.g2.bx.psu.edu</url>
+      <revision>8bc80c2a15b3</revision>
+    </repository>
+  </toolRepositories>
+</iridaWorkflow>

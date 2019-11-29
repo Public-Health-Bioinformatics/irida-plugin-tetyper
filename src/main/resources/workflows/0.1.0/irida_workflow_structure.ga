@@ -1,0 +1,200 @@
+{
+    "uuid": "7c96455d-810f-40ee-b68d-9078fd61cb2c",
+    "tags": [],
+    "format-version": "0.1",
+    "name": "tetyper",
+    "version": 2,
+    "steps": {
+        "0": {
+            "tool_id": null,
+            "tool_version": null,
+            "outputs": [],
+            "workflow_outputs": [],
+            "input_connections": {},
+            "tool_state": "{\"collection_type\": \"list:paired\", \"name\": \"sequence_reads_paired\"}",
+            "id": 0,
+            "uuid": "f7a555f2-d839-42d9-bbbd-d2c096ab5a4f",
+            "errors": null,
+            "name": "Input dataset collection",
+            "label": "sequence_reads_paired",
+            "inputs": [
+                {
+                    "description": "",
+                    "name": "sequence_reads_paired"
+                }
+            ],
+            "position": {
+                "top": 174.5,
+                "left": 293
+            },
+            "annotation": "",
+            "content_id": null,
+            "type": "data_collection_input"
+        },
+        "1": {
+            "tool_id": null,
+            "tool_version": null,
+            "outputs": [],
+            "workflow_outputs": [],
+            "input_connections": {},
+            "tool_state": "{\"name\": \"reference\"}",
+            "id": 1,
+            "uuid": "6b29cd7e-b3d2-48d3-af34-35029c802ac7",
+            "errors": null,
+            "name": "Input dataset",
+            "label": "reference",
+            "inputs": [
+                {
+                    "description": "",
+                    "name": "reference"
+                }
+            ],
+            "position": {
+                "top": 300.5,
+                "left": 323.5
+            },
+            "annotation": "",
+            "content_id": null,
+            "type": "data_input"
+        },
+        "2": {
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/tetyper/tetyper/1.1+galaxy0",
+            "tool_version": "1.1+galaxy0",
+            "outputs": [
+                {
+                    "type": "tabular",
+                    "name": "summary"
+                },
+                {
+                    "type": "vcf",
+                    "name": "snps"
+                },
+                {
+                    "type": "tabular",
+                    "name": "blast"
+                },
+                {
+                    "type": "bam",
+                    "name": "alignment"
+                },
+                {
+                    "type": "text",
+                    "name": "log"
+                }
+            ],
+            "workflow_outputs": [
+                {
+                    "output_name": "snps",
+                    "uuid": "c5e37801-69eb-4a43-bfe5-8060c0549151",
+                    "label": ""
+                },
+                {
+                    "output_name": "blast",
+                    "uuid": "f9beddcf-cc3c-4679-8691-cb1e0930ab71",
+                    "label": ""
+                },
+                {
+                    "output_name": "log",
+                    "uuid": "899acb44-9796-4850-9203-f4c45bd5ae4c",
+                    "label": null
+                },
+                {
+                    "output_name": "alignment",
+                    "uuid": "53937093-b6b9-4dab-af9d-105db42e57e1",
+                    "label": null
+                },
+                {
+                    "output_name": "summary",
+                    "uuid": "e37a3890-5161-47dd-b5a8-45c045cf8aef",
+                    "label": null
+                }
+            ],
+            "input_connections": {
+                "collection_paired|input_pair": {
+                    "output_name": "output",
+                    "id": 0
+                },
+                "reference": {
+                    "output_name": "output",
+                    "id": 1
+                }
+            },
+            "tool_state": "{\"min_each_strand\": \"\\\"1\\\"\", \"__page__\": null, \"collection_paired\": \"{\\\"__current_case__\\\": 0, \\\"input_pair\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"selector\\\": \\\"collection\\\"}\", \"reference\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"min_mapped_len\": \"\\\"30\\\"\", \"snp_profiles\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"flank_length\": \"\\\"5\\\"\", \"struct_profiles\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"include_log\": \"\\\"true\\\"\", \"min_qual\": \"\\\"10\\\"\", \"min_reads\": \"\\\"10\\\"\", \"__rerun_remap_job_id__\": null}",
+            "id": 2,
+            "tool_shed_repository": {
+                "owner": "iuc",
+                "changeset_revision": "8bc80c2a15b3",
+                "name": "tetyper",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "uuid": "5594cb80-e905-4842-a74d-cbe3d5666496",
+            "errors": null,
+            "name": "TETyper",
+            "post_job_actions": {
+                "RenameDatasetActionsnps": {
+                    "output_name": "snps",
+                    "action_type": "RenameDatasetAction",
+                    "action_arguments": {
+                        "newname": "tetyper_snps.vcf"
+                    }
+                },
+                "RenameDatasetActionlog": {
+                    "output_name": "log",
+                    "action_type": "RenameDatasetAction",
+                    "action_arguments": {
+                        "newname": "tetyper_log.txt"
+                    }
+                },
+                "RenameDatasetActionsummary": {
+                    "output_name": "summary",
+                    "action_type": "RenameDatasetAction",
+                    "action_arguments": {
+                        "newname": "tetyper_summary.tsv"
+                    }
+                },
+                "RenameDatasetActionalignment": {
+                    "output_name": "alignment",
+                    "action_type": "RenameDatasetAction",
+                    "action_arguments": {
+                        "newname": "tetyper_alignment.bam"
+                    }
+                },
+                "RenameDatasetActionblast": {
+                    "output_name": "blast",
+                    "action_type": "RenameDatasetAction",
+                    "action_arguments": {
+                        "newname": "tetyper_blast.tsv"
+                    }
+                }
+            },
+            "label": null,
+            "inputs": [
+                {
+                    "name": "collection_paired",
+                    "description": "runtime parameter for tool TETyper"
+                },
+                {
+                    "name": "reference",
+                    "description": "runtime parameter for tool TETyper"
+                },
+                {
+                    "name": "snp_profiles",
+                    "description": "runtime parameter for tool TETyper"
+                },
+                {
+                    "name": "struct_profiles",
+                    "description": "runtime parameter for tool TETyper"
+                }
+            ],
+            "position": {
+                "top": 252.5,
+                "left": 577.5
+            },
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/tetyper/tetyper/1.1+galaxy0",
+            "type": "tool"
+        }
+    },
+    "annotation": "",
+    "a_galaxy_workflow": "true"
+}
