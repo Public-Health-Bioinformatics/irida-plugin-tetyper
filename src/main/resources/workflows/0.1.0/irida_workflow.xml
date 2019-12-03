@@ -5,7 +5,7 @@
   <version>0.1.0</version>
   <analysisType>TETYPER</analysisType>
   <inputs>
-    <sequenceReadsPaired/>
+    <sequenceReadsPaired>sequence_reads_paired</sequenceReadsPaired>
     <reference>reference</reference>
     <requiresSingleSample>true</requiresSingleSample>
   </inputs>
@@ -27,11 +27,11 @@
     </parameter>
   </parameters>
   <outputs>
-    <output name="tetyper_snps.vcf" fileName="tetyper_snps.vcf"/>
-    <output name="tetyper_log.txt" fileName="tetyper_log.txt"/>
-    <output name="tetyper_summary.tsv" fileName="tetyper_summary.tsv"/>
-    <output name="tetyper_alignment.bam" fileName="tetyper_alignment.bam"/>
-    <output name="tetyper_blast.tsv" fileName="tetyper_blast.tsv"/>
+    <output name="tetyper_snps" fileName="tetyper_snps.vcf"/>
+    <output name="tetyper_log" fileName="tetyper_log.txt"/>
+    <output name="tetyper_summary" fileName="tetyper_summary.tsv"/>
+    <output name="tetyper_alignment" fileName="tetyper_alignment.bam"/>
+    <output name="tetyper_blast" fileName="tetyper_blast.tsv"/>
   </outputs>
   <toolRepositories>
     <repository>

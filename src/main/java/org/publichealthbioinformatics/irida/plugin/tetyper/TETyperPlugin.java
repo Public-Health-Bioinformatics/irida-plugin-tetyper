@@ -55,7 +55,7 @@ public class TETyperPlugin extends Plugin {
 		 * <strong>irida_workflow.xml</strong> file.
 		 * 
 		 * <pre>
-		 * {@code <analysisType>READ_INFO</analysisType>}
+		 * {@code <analysisType>TETYPER</analysisType>}
 		 * </pre>
 		 * 
 		 * @return The particular {@link AnalysisType} for this pipeline.
