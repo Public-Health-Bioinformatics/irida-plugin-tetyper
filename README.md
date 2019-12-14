@@ -50,12 +50,11 @@ The plugin should now show up in the **Analyses > Pipelines** section of IRIDA.
 
 ## Analysis Results
 
-You should be able to run a pipeline with this plugin and get analysis results. The results include a full `abricate` 
-report, and a screened `abricate` report that includes only your genes of interest.
+You should be able to run a pipeline with this plugin and get analysis results. The results include a summary of
+the TETyper typing results, a `.vcf` file containing SNPs and a blast report indicating where deletions were detected. 
+A TETyper `.log` file and a `.bam` alignment file are also provided.
 
 ![plugin-results-1.png][]
-![plugin-results-2.png][]
-![plugin-results-3.png][]
 
 ## Metadata Table
 
@@ -67,8 +66,6 @@ Once that functionality has been added, the transposable element type informatio
 |--------------------------------------------|-----------------------------------------------------------|
 |                                            |                                                           |
 
-
-![plugin-metadata.png][]
 
 # Building
 
