@@ -27,11 +27,11 @@
     </parameter>
   </parameters>
   <outputs>
+    <output name="tetyper_summary" fileName="tetyper_summary.tsv"/>
     <output name="tetyper_snps" fileName="tetyper_snps.vcf"/>
     <output name="tetyper_log" fileName="tetyper_log.txt"/>
-    <output name="tetyper_summary" fileName="tetyper_summary.tsv"/>
-    <output name="tetyper_alignment" fileName="tetyper_alignment.bam"/>
     <output name="tetyper_blast" fileName="tetyper_blast.tsv"/>
+    <output name="tetyper_alignment" fileName="tetyper_alignment.bam"/>
   </outputs>
   <toolRepositories>
     <repository>
