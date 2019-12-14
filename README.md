@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/dfornika/irida-plugin-tetyper.svg?branch=master)](https://travis-ci.org/dfornika/irida-plugin-tetyper)
-[![codecov](https://codecov.io/gh/dfornika/irida-plugin-tetyper/branch/master/graph/badge.svg)](https://codecov.io/gh/dfornika/irida-plugin-tetyper)
-[![Current Release Version](https://img.shields.io/github/release/dfornika/irida-plugin-tetyper.svg)](https://github.com/dfornika/irida-plugin-tetyper/releases)
+[![Build Status](https://travis-ci.org/public-health-bioinformatics/irida-plugin-tetyper.svg?branch=master)](https://travis-ci.org/public-health-bioinformatics/irida-plugin-tetyper)
+[![codecov](https://codecov.io/gh/public-health-bioinformatics/irida-plugin-tetyper/branch/master/graph/badge.svg)](https://codecov.io/gh/public-health-bioinformatics/irida-plugin-tetyper)
+[![Current Release Version](https://img.shields.io/github/release/public-health-bioinformatics/irida-plugin-tetyper.svg)](https://github.com/public-health-bioinformatics/irida-plugin-tetyper/releases)
 
 # IRIDA TETyper Pipeline Plugin
 
