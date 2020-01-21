@@ -44,7 +44,7 @@
                 }
             ],
             "input_connections": {},
-            "tool_state": "{{\"name\": \"reference\"}}",
+            "tool_state": "{\"name\": \"reference\"}",
             "id": 1,
             "uuid": "ee60e2f2-8fc6-4b33-8c9b-bb2b4395dfa8",
             "errors": null,
