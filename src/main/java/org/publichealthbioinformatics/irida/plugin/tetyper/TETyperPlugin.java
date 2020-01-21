@@ -70,14 +70,14 @@ public class TETyperPlugin extends Plugin {
 		 * <strong>id</strong> entry in the <strong>irida_workflow.xml</strong> file.
 		 * 
 		 * <pre>
-		 * {@code <id>b78c8d73-6e8c-419c-b959-d19df935501b</id>}
+		 * {@code <id>9bb61595-51d1-44c3-8180-02a8d7d05c99</id>}
 		 * </pre>
 		 * 
 		 * @return A {@link UUID} defining the id of this pipeline.
 		 */
 		@Override
 		public UUID getDefaultWorkflowUUID() {
-			return UUID.fromString("b78c8d73-6e8c-419c-b959-d19df935501b");
+			return UUID.fromString("9bb61595-51d1-44c3-8180-02a8d7d05c99");
 		}
 
 		/*******************************************************************************

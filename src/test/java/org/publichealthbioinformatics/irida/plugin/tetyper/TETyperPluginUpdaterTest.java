@@ -64,8 +64,11 @@ public class TETyperPluginUpdaterTest {
     @Test
     public void testUpdate() throws Throwable {
         ImmutableMap<String, String> expectedResults = ImmutableMap.<String, String>builder()
-                // .put("tetyper/deletions", "none")
+                .put("tetyper/type", "Tn4401b-2")
+                .put("tetyper/left_flanks", "AGATA|GTTCT")
+                .put("tetyper/right_flanks", "AGATA|GTTCT")
                 .build();
+
         Path teTyperSummaryFilePath = Paths.get(ClassLoader.getSystemResource("tetyper_summary.tsv").toURI());
 
         AnalysisOutputFile teTyperSummaryFile = new AnalysisOutputFile(teTyperSummaryFilePath, null, null, null);

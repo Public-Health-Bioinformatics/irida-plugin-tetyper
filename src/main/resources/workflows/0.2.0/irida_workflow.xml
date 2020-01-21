@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iridaWorkflow>
+  <id>9bb61595-51d1-44c3-8180-02a8d7d05c99</id>
+  <name>tetyper</name>
+  <version>0.2.0</version>
+  <analysisType>TETYPER</analysisType>
+  <inputs>
+    <sequenceReadsPaired>sequence_reads_paired</sequenceReadsPaired>
+    <reference>reference</reference>
+    <requiresSingleSample>true</requiresSingleSample>
+  </inputs>
+  <parameters>
+    <parameter name="tetyper-2-min_each_strand" defaultValue="1">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/tetyper/tetyper/1.1+galaxy1" parameterName="min_each_strand" label="Minimum Reads (each strand)" type="integer"/>
+    </parameter>
+    <parameter name="tetyper-2-min_qual" defaultValue="10">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/tetyper/tetyper/1.1+galaxy1" parameterName="min_qual" label="Minimum quality" type="integer"/>
+    </parameter>
+    <parameter name="tetyper-2-min_reads" defaultValue="10">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/tetyper/tetyper/1.1+galaxy1" parameterName="min_reads" label="Minimum Reads" type="integer"/>
+    </parameter>
+    <parameter name="tetyper-2-flank_length" defaultValue="5">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/tetyper/tetyper/1.1+galaxy1" parameterName="flank_length" label="Flank Length" type="integer"/>
+    </parameter>
+    <parameter name="tetyper-2-min_mapped_len" defaultValue="30">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/tetyper/tetyper/1.1+galaxy1" parameterName="min_mapped_len" label="Minimum Mapped Length" type="integer"/>
+    </parameter>
+    <parameter name="tetyper-2-snp_profiles" required="true">
+      <dynamicSource>
+        <galaxyToolDataTable name="tetyper_snp_profiles" displayColumn="name" parameterColumn="value" />
+      </dynamicSource>
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/tetyper/tetyper/1.1+galaxy1" parameterName="snp_profiles_source.snp_profiles"/>
+    </parameter>
+    <parameter name="tetyper-2-struct_profiles" required="true">
+      <dynamicSource>
+        <galaxyToolDataTable name="tetyper_struct_profiles" displayColumn="name" parameterColumn="value" />
+      </dynamicSource>
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/iuc/tetyper/tetyper/1.1+galaxy1" parameterName="struct_profiles_source.struct_profiles"/>
+    </parameter>
+  </parameters>
+  <outputs>
+    <output name="tetyper_summary" fileName="tetyper_summary.tsv"/>
+    <output name="tetyper_snps" fileName="tetyper_snps.vcf"/>
+    <output name="tetyper_blast" fileName="tetyper_blast.tsv"/>
+    <output name="tetyper_log" fileName="tetyper_log.txt"/>
+    <output name="tetyper_alignment" fileName="tetyper_alignment.bam"/>
+  </outputs>
+  <toolRepositories>
+    <repository>
+      <name>tetyper</name>
+      <owner>iuc</owner>
+      <url>https://toolshed.g2.bx.psu.edu</url>
+      <revision>36093854bfc7</revision>
+    </repository>
+  </toolRepositories>
+</iridaWorkflow>

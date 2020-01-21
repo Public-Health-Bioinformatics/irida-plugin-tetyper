@@ -32,7 +32,7 @@ managers within your Galaxy instance. These can be found at:
 
 | Name                               | Version         | Owner                          | Metadata Revision | Galaxy Toolshed Link                                                                                                                              |
 |------------------------------------|-----------------|------------------------------- |-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| tetyper                            | `1.1`           | `iuc`                          | 0 (2019-11-28)    | [tetyper-0:8bc80c2a15b3](https://toolshed.g2.bx.psu.edu/view/iuc/tetyper/8bc80c2a15b3)                                                            |
+| tetyper                            | `1.1`           | `iuc`                          | 1 (2020-01-18)    | [tetyper-1:36093854bfc7](https://toolshed.g2.bx.psu.edu/view/iuc/tetyper/36093854bfc7)                                                            |
 
 ## Installing to IRIDA
 
@@ -58,13 +58,14 @@ A TETyper `.log` file and a `.bam` alignment file are also provided.
 
 ## Metadata Table
 
-This pipeline plugin does not currently write any data to the IRIDA Metadata Table. Future versions of this pipeline
-plugin will do so. The initial version of this plugin does not compare SNPs and structural varaints against a typing scheme.
-Once that functionality has been added, the transposable element type information will be written to the IRIDA metadata table.
+And, you should be able to save and view these results in the IRIDA metadata table. The following fields are written to
+the IRIDA 'Line List':
 
-| Field Name                                 | Description                                               |
-|--------------------------------------------|-----------------------------------------------------------|
-|                                            |                                                           |
+| Field Name                       | Description                                                                                                                                                        |
+|----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| tetyper/type                     | Transposable element type (accounting for both SNPs and Structural variants). Corresponds to `Combined_variant` field in TETyper summary output                    |
+| tetyper/left_flanks              | A list of distinct sequences passing quality filters that flank the start position of the reference. If multiple sequences are reported, they are delimited by `|` |
+| tetyper/right_flanks             | A list of distinct sequences passing quality filters that flank the end position of the reference.   If multiple sequences are reported, they are delimited by `|` |
 
 
 # Building
