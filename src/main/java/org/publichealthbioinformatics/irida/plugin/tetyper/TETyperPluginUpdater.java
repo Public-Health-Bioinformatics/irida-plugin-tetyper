@@ -93,14 +93,25 @@ public class TETyperPluginUpdater implements AnalysisSampleUpdater {
 			// objects
 			Map<String, String> teTyperSummary = parseTeTyperSummaryFile(teTyperSummaryFilePath);
 
-			String deletions = teTyperSummary.get("deletions");
-			// add
-			PipelineProvidedMetadataEntry teTyperDeletionsEntry = new PipelineProvidedMetadataEntry(deletions, "string", analysis);
+			String combinedVariant = teTyperSummary.get("combined_variant");
+			String leftFlanks = teTyperSummary.get("left_flanks");
+			String leftFlankCounts = teTyperSummary.get("left_flank_counts");
+			String rightFlanks = teTyperSummary.get("right_flanks");
+			String rightFlankCounts = teTyperSummary.get("right_flank_counts");
+			String key = "";
 
-			// key will be string like 'tetyper/deletions'
-			String key = workflowName + "/deletions";
-			// Not adding any metadata entries yet....
-			// metadataEntries.put(key, teTyperDeletionsEntry);
+			// add
+			PipelineProvidedMetadataEntry teTyperCombinedVariantEntry = new PipelineProvidedMetadataEntry(combinedVariant, "xs:string", analysis);
+			key = workflowName + "/type";
+			metadataEntries.put(key, teTyperCombinedVariantEntry);
+
+			PipelineProvidedMetadataEntry teTyperLeftFlankEntry = new PipelineProvidedMetadataEntry(leftFlanks, "xs:string", analysis);
+			key = workflowName + "/left_flanks";
+			metadataEntries.put(key, teTyperLeftFlankEntry);
+
+			PipelineProvidedMetadataEntry teTyperRightFlankEntry = new PipelineProvidedMetadataEntry(rightFlanks, "xs:string", analysis);
+			key = workflowName + "/right_flanks";
+			metadataEntries.put(key, teTyperRightFlankEntry);
 
 			Map<MetadataTemplateField, MetadataEntry> metadataMap = metadataTemplateService.getMetadataMap(metadataEntries);
 
